@@ -22,10 +22,22 @@ epd.imagered.fill(0xff)
 
 # Add "HELLO WORLD" text (centered)
 epd.imageblack.text("HELLO", 20, 95, 0x00)
-epd.imageblack.text("WORLD", 20, 110, 0x00)
+epd.imagered.text("WORLD", 20, 110, 0x00)  # Red text
 
-# Add a border
+# Add black border
 epd.imageblack.rect(5, 5, 94, 202, 0x00)
+
+# Add black rectangles
+epd.imageblack.fill_rect(10, 10, 30, 20, 0x00)
+epd.imageblack.fill_rect(10, 35, 30, 20, 0x00)
+
+# Add red rectangles
+epd.imagered.fill_rect(50, 10, 30, 20, 0x00)
+epd.imagered.fill_rect(50, 35, 30, 20, 0x00)
+
+# Add mixed area (black + red overlapping rectangles)
+epd.imageblack.fill_rect(30, 180, 20, 20, 0x00)
+epd.imagered.fill_rect(35, 185, 20, 20, 0x00)
 
 # Display (will flash during update)
 print("Updating display (flashing is normal)...")
