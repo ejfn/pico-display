@@ -1,0 +1,23 @@
+# MicroPython
+*.pyc
+__pycache__/
+
+# VSCode
+.vscode/
+.picowgo
+
+# Python virtual environment
+venv/
+env/
+
+# Firmware files (too large for git)
+*.uf2
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*~
